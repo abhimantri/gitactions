@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+    runner:
+      image: tcardonne/github-runner:latest
+      environment:
+        RUNNER_NAME: "my-runner"
+        RUNNER_REPOSITORY_URL: "https://github.com/alexsplash/Self-hosted-runner"
+        RUNNER_LABELS: "test-label1"
+        RUNNER_TOKEN: "RUNNER_TOKEN"
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
