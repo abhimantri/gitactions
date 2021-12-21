@@ -40,7 +40,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          tags: ghcr.io/${{ github.repository_owner }}/simplewhale:latest
+          tags: ghcr.io/${{ github.repository_owner }}/elastic-logstash:latest
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
@@ -48,6 +48,6 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:latest 
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/elastic-logstash:latest 
          # cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:buildcache
          # cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:buildcache,mode=max
