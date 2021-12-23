@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 USER root
-RUN apt-get install libcurl4 -y
+RUN apt-get install curl ec2-instance-connect pollinate ubuntu-server -y
 RUN apt-get install ssh-import-id ubuntu-standard wget -y
 #RUN echo “deb http://security.ubuntu.com/ubuntu bionic-security main” | tee -a /etc/apt/sources.list.d/ubuntu-latest.list
 #RUN apt-get install docker*
