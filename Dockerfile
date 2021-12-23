@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 USER root
-RUN apt update && apt upgrade
+RUN apt update && apt upgrade -y
 RUN apt-get install curl -y
 RUN apt-get install ssh-import-id ubuntu-standard wget -y
 #RUN echo “deb http://security.ubuntu.com/ubuntu bionic-security main” | tee -a /etc/apt/sources.list.d/ubuntu-latest.list
